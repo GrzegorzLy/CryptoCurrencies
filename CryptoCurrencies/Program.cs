@@ -10,8 +10,8 @@ namespace CryptoCurrencies
     {
         static void Main(string[] args)
         {
-            Market market = Market.CreatMarket(Enum.MarketsEmun.BetCoin);
-            Console.WriteLine(market.Name);
+            Market market = Markets.FactoryMarket.Instance.CreatMarket(Enum.MarketsEnum.BitCoin);
+            Console.WriteLine(market);
         }
     }
 }

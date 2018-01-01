@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Coins
 {
-    class CoinCardano
+    class CoinCardano : Coin
     {
+        protected override decimal Value { get; set; } = 2.43m;
+        public override string Name { get; set; } = "Cardano";
     }
 }

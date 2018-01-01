@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Enum
 {
-    enum MarketsEnum
+   enum SortedListEnum
     {
-        BitCoin,
-        Bitrex,
-        Kraken,
-        Nevbit
+        buy,
+        sell
     }
 }

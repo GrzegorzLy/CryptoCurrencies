@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Markets
 {
-    class MarketBittrex :Market
+    class MarketBitCoin : Market
     {
-        public MarketBittrex(List<Coin> ListOfCoins) : base(ListOfCoins)
+        public MarketBitCoin(List<Coin> ListOfCoins) : base(ListOfCoins)
         {
         }
 
-        public override string Name { get; } = "Bittrex Market";
-
-
+        public override string Name { get; } = "BitCoin Market";
+   
     }
 }

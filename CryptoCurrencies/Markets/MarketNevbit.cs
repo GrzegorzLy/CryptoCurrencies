@@ -8,8 +8,12 @@ namespace CryptoCurrencies.Markets
 {
     class MarketNevbit : Market
     {
+        public MarketNevbit(List<Coin> ListOfCoins) : base(ListOfCoins)
+        {
+        }
+
         public override string Name { get; } = "Nevbit Market";
-        public override List<Coin> ListOfCoins { get; set; }
+
 
     }
 }

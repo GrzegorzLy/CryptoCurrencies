@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Enum
 {
-    enum MarketsEnum
+  enum CoinsEnum
     {
         BitCoin,
-        Bitrex,
-        Kraken,
-        Nevbit
+        Cardano,
+        Dash,
+        Etherenum,
+        Litecoin,
+        Ripple
     }
 }

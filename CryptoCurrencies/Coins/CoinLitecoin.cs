@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Coins
 {
-    class CoinLitecoin
+    class CoinLitecoin : Coin
     {
+        protected override decimal Value { get; set; } = 778.03m;
+        public override string Name { get; set; } = "Litecoin";
     }
 }

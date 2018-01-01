@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Coins
 {
-    class CoinEthereum
+    class CoinEthereum : Coin
     {
+        protected override decimal Value { get; set; } = 2656m;
+        public override string Name { get; set; } = "Ethernum";
     }
 }

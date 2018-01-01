@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Coins
 {
-    class CoinRipple
+    class CoinRipple : Coin
     {
+        protected override decimal Value { get; set; } = 6.65m;
+        public override string Name { get; set; } = "Ripple";
+
     }
 }

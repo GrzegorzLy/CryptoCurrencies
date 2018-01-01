@@ -49,9 +49,13 @@
     <Compile Include="Coins\CoinEthereum.cs" />
     <Compile Include="Coins\CoinLitecoin.cs" />
     <Compile Include="Coins\CoinRipple.cs" />
+    <Compile Include="Enum\CoinsEnum.cs" />
     <Compile Include="Enum\MarketsEnum.cs" />
+    <Compile Include="Enum\SortedListEnum.cs" />
     <Compile Include="Market.cs" />
-    <Compile Include="Markets\MarketBetCoin.cs" />
+    <Compile Include="Markets\FactoryMarket.cs" />
+    <Compile Include="Markets\IFactoryMarket.cs" />
+    <Compile Include="Markets\MarketBitCoin.cs" />
     <Compile Include="Markets\MarketBittrex.cs" />
     <Compile Include="Markets\MarketKraken.cs" />
     <Compile Include="Markets\MarketNevbit.cs" />

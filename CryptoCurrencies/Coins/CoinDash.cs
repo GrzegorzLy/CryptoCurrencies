@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.Coins
 {
-    class CoinDash
+    class CoinDash : Coin
     {
+        protected override decimal Value { get; set; } = 3967m;
+        public override string Name { get; set; } = "Dash";
     }
 }

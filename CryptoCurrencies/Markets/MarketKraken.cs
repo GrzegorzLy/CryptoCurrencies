@@ -8,8 +8,11 @@ namespace CryptoCurrencies.Markets
 {
     class MarketKraken : Market
     {
+        public MarketKraken(List<Coin> ListOfCoins) : base(ListOfCoins)
+        {
+        }
+
         public override string Name { get; } = "Kraken Market";
-        public override List<Coin> ListOfCoins { get; set; }
 
     }
 }
