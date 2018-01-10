@@ -9,10 +9,8 @@ namespace CryptoCurrencies.Enum
   enum CoinsEnum
     {
         BitCoin,
-        Cardano,
         Dash,
         Etherenum,
-        Litecoin,
-        Ripple
+        Litecoin
     }
 }
