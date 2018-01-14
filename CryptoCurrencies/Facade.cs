@@ -13,22 +13,36 @@ namespace CryptoCurrencies
         Market.MarketAbstract market;
         AbstractFactoryView factoryView;
         IConsoleView consoleView;
+        Mediator mediator;
 
-
+        /// <summary>
+        /// design pattern facade
+        /// </summary>
         public Facade()
         {
             factoryMarket = new Market.FactoryMarket();
+            
         }
 
+
+        /// <summary>
+        /// Start program - creat market, view...
+        /// </summary>
         public void StartProgram()
         {
             user = Login.start();
+
+            //designe pattern abstract factory
             market = factoryMarket.CreatMarket();
+
+            //design pattern abstract factory and decorator
             CreatView(Enum.ViewEnum.MainWindow);
             if(consoleView != null)
             {
                 consoleView.Write();
             }
+            mediator = new Mediator(consoleView);
+            market.addObserver(mediator);
                     
         }
 
@@ -45,6 +59,15 @@ namespace CryptoCurrencies
                 Console.WriteLine("Something goes wrong...");
                 Environment.Exit(0);
             }
+        }
+
+        /// <summary>
+        /// Change connection type
+        /// Designe pattenrs Singleton, strategy, adapter
+        /// </summary>
+        public void ChangeConnection()
+        {
+            GlobalConfig.globalConfig.ChangeConnection();
         }
     }
 }

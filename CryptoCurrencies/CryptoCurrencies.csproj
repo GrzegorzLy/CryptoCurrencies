@@ -47,9 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -78,11 +75,14 @@
     <Compile Include="Facade.cs" />
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="IDataConnection.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="ISubject.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Market\CryptoMarket.cs" />
     <Compile Include="Market\FactoryMarket.cs" />
     <Compile Include="Market\IFactoryMarket.cs" />
     <Compile Include="Market\MarketAbstract.cs" />
+    <Compile Include="Mediator.cs" />
     <Compile Include="OldTextConnector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

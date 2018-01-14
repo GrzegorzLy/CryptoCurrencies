@@ -14,20 +14,20 @@ namespace CryptoCurrencies
         { 
             get
             {
-                return AverageValue * (decimal)1.1;
+                return AverageValue * (decimal)0.995;
             }
         } 
         public decimal buyValue
         {
             get
             {
-                return AverageValue * (decimal)0.9;
+                return AverageValue * (decimal)1.005;
             }
         }
 
         public abstract string Name { get; set; }
 
-
+       
 
         public void updateAvargeValue(decimal value)
         {

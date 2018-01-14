@@ -7,7 +7,7 @@ using CryptoCurrencies.Enum;
 
 namespace CryptoCurrencies.Market
 {
-    abstract class MarketAbstract
+    abstract class MarketAbstract : ISubject
     {
         public List<Coin> ListOfCoins { get; set; }
         public string Name { get; set; }
@@ -22,7 +22,13 @@ namespace CryptoCurrencies.Market
             return Name.ToString();
         }
 
-        
+        public abstract void addObserver(IObserver observer);
 
+
+        public abstract void removeObserver(IObserver observer);
+
+
+        public abstract void execute();
+      
     }
 }

@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CryptoCurrencies.Market
+namespace CryptoCurrencies.Market 
 {
     class CryptoMarket : MarketAbstract
     {
+        private List<IObserver> observerList = new List<IObserver>();
+
         private decimal fluctuationPrecentage = 20M;
         Random random;
         public CryptoMarket(List<Coin> listOfCoins) : base(listOfCoins)
@@ -26,6 +28,7 @@ namespace CryptoCurrencies.Market
                 {
                     coin.updateAvargeValue(randomFluctuation());
                 }
+                execute();
 
             }
         }
@@ -34,6 +37,30 @@ namespace CryptoCurrencies.Market
         {
            int ram = random.Next((int)-fluctuationPrecentage, (int)fluctuationPrecentage);
             return (ram * 0.001M);
+        }
+
+        public override void addObserver(IObserver observer)
+        {
+            if(observerList != null)
+            {
+                observerList.Add(observer);
+            }
+        }
+
+        public override void removeObserver(IObserver observer)
+        {
+            if (observerList.Contains(observer))
+            {
+                observerList.Remove(observer);
+            }
+        }
+
+        public override void execute()
+        {
+            if (observerList != null)
+            {
+                observerList.ForEach(observer => observer.update());
+            }
         }
     }
 

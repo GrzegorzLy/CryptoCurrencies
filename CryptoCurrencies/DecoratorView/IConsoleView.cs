@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CryptoCurrencies.DecoratorView
 {
-    interface IConsoleView
+    public interface IConsoleView
     {
        void Write();
     }

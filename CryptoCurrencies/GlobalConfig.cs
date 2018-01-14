@@ -32,9 +32,16 @@ namespace CryptoCurrencies
             }
         }
 
-        public void ChangeConnection(IDataConnection dataConnection)
+        public void ChangeConnection()
         {
-            Connections = dataConnection;
+            if(Connections.GetType() == typeof(SqlConnector))
+            {
+                Connections = new AdapterTextConnector();
+            }
+            else
+            {
+                Connections = new SqlConnector();
+            }
         }
 
     }

@@ -17,9 +17,28 @@ namespace CryptoCurrencies.DecoratorView
         public override void Write()
         {
             consoleView.Write();
-            Console.WriteLine("sie robi...");
+            showCoins();
         }
 
+        public void showCoins()
+        {
+            int xPositon = 10;
+
+            Console.SetCursorPosition(0, 4);
+            Console.WriteLine("Buy(zl): ");
+            Console.SetCursorPosition(0, 5);
+            Console.WriteLine("Sell(zl): ");
+            foreach (Coin coin in marketAbstract.ListOfCoins)
+            {
+                Console.SetCursorPosition(xPositon, 3);
+                Console.WriteLine(coin.Name);
+                Console.SetCursorPosition(xPositon, 4);
+                Console.WriteLine(coin.buyValue);
+                Console.SetCursorPosition(xPositon, 5);
+                Console.WriteLine(coin.sellValue);
+                xPositon += 15;
+            }
+        }
 
     }
 }
